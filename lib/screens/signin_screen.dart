@@ -4,7 +4,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:movierecommender/reusable_widgets/reusable_widget.dart';
 import 'package:movierecommender/screens/signup_screen.dart';
 import 'package:movierecommender/screens/reset_password.dart';
-import 'package:movierecommender/screens/home_screen.dart';
+import 'package:movierecommender/screens/preference_screen.dart';
 import 'package:movierecommender/utils/color_utils.dart';
 
 class SignInScreen extends StatefulWidget {
@@ -69,7 +69,7 @@ class _SignInScreenState extends State<SignInScreen> {
                           password: _passwordTextController.text)
                       .then((value) {
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => HomeScreen()));
+                        MaterialPageRoute(builder: (context) => PreferenceScreen()));
                   }).onError((error, stackTrace) {
                     print("Error ${error.toString()}");
                   });
@@ -110,6 +110,7 @@ Widget forgotPassword(BuildContext context) {
     width: MediaQuery.of(context).size.width,
     height: 35,
     alignment: Alignment.bottomRight,
+    padding: EdgeInsets.fromLTRB(0, 0, 12, 0),
      child: TextButton(
       child: const Text(
          "Forgot Password?",

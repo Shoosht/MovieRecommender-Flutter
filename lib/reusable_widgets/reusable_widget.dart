@@ -5,8 +5,8 @@ Image logoWidget(String imageName) {
   return Image.asset(
     imageName,
     fit: BoxFit.fitWidth,
-    width: 240,
-    height: 240,
+    width: 210,
+    height: 210,
     color: hexStringToColor("DDDEEB"),
   );
 }
@@ -15,14 +15,14 @@ Container reusableTextField(String text, IconData icon, bool isPasswordType,
     TextEditingController controller) {
   return Container( // Wrap in a Container
     width: 324,
-    height: 58,
+    height: 50,
     child: TextField(
       controller: controller,
       obscureText: isPasswordType,
       enableSuggestions: !isPasswordType,
       autocorrect: !isPasswordType,
       cursorColor: hexStringToColor("DDDEEB"),
-      style: TextStyle(color: Colors.white.withOpacity(0.9)),
+      style: TextStyle(color: hexStringToColor("DDDEEB")),
       decoration: InputDecoration(
         prefixIcon: Icon(
           icon,
