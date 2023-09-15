@@ -1,6 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:movierecommender/reusable_widgets/reusable_widget.dart';
-import 'package:movierecommender/screens/home_screen.dart';
+import 'package:movierecommender/screens/preference_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:movierecommender/utils/color_utils.dart';
 
@@ -62,7 +62,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       .then((value) {
                     print("Created New Account");
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => HomeScreen()));
+                        MaterialPageRoute(builder: (context) => PreferenceScreen()));
                   }).onError((error, stackTrace) {
                     print("Error ${error.toString()}");
                   });
