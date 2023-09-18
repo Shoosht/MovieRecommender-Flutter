@@ -25,7 +25,7 @@ class _SignInScreenState extends State<SignInScreen> {
       body: Container(
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
-        color: hexStringToColor("232430"), // Set the background color of the Container
+        color: hexStringToColor("232430"),
         child: SingleChildScrollView(
           physics: AlwaysScrollableScrollPhysics(),
           child: Padding(
@@ -51,14 +51,14 @@ class _SignInScreenState extends State<SignInScreen> {
                   "Enter Email",
                   Icons.person_outline,
                   false,
-                  _emailTextController, // Use _emailTextController
+                  _emailTextController,
                 ),
                 SizedBox(height: 15),
                 reusableTextField(
                   "Enter Password",
                   Icons.lock_outline,
                   true,
-                  _passwordTextController, // Use _passwordTextController
+                  _passwordTextController,
                 ),
                 SizedBox(height: 5),
                 forgotPassword(context),
@@ -74,7 +74,7 @@ class _SignInScreenState extends State<SignInScreen> {
                     print("Error ${error.toString()}");
                   });
                 }),
-                signUpOption(context), // Pass the context here
+                signUpOption(context), 
               ],
             ),
           ),
@@ -84,7 +84,7 @@ class _SignInScreenState extends State<SignInScreen> {
   }
 }
 
-Row signUpOption(BuildContext context) { // Pass context as a parameter
+Row signUpOption(BuildContext context) { 
   return Row(
     mainAxisAlignment: MainAxisAlignment.center,
     children: [
