@@ -17,7 +17,7 @@ class MovieApi {
 
 
     final response = await http.get(uri, headers: {
-      'X-RapidAPI-Key': 'api_key',
+      'X-RapidAPI-Key': '160185807emsha4b0f6124783f69p157698jsn53ed708e5d67',
       'X-RapidAPI-Host': 'moviesdatabase.p.rapidapi.com',
       "useQueryString": "true"
     });
