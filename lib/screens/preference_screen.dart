@@ -4,6 +4,7 @@ import 'package:movierecommender/views/home.dart';
 import 'package:movierecommender/utils/color_utils.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:movierecommender/screens/mobile_functionality.dart';
 
 class PreferenceScreen extends StatefulWidget {
   const PreferenceScreen({Key? key}) : super(key: key);
@@ -33,6 +34,18 @@ class _PreferenceScreenState extends State<PreferenceScreen> {
         backgroundColor: hexStringToColor("232430"),
         iconTheme: IconThemeData(color: hexStringToColor("DDDEEB")),
         actions: [
+          IconButton(
+              icon: Icon(Icons.phone_android),
+              onPressed: () {
+                
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => MobileFunctionalityScreen(), 
+                  ),
+                );
+              },
+            ),
           IconButton(
             icon: Icon(Icons.logout),
             onPressed: () {
