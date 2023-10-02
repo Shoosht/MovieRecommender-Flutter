@@ -16,6 +16,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Movie Recommender',
       theme: ThemeData(
+   
         colorScheme: ColorScheme.fromSeed(seedColor: Color.fromARGB(255, 238, 238, 240)),
         useMaterial3: true,
       ),
