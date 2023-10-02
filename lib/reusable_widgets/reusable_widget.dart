@@ -13,7 +13,7 @@ Image logoWidget(String imageName) {
 
 Container reusableTextField(String text, IconData icon, bool isPasswordType,
     TextEditingController controller) {
-  return Container( // Wrap in a Container
+  return Container( 
     width: 324,
     height: 50,
     child: TextField(

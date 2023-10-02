@@ -75,6 +75,13 @@ class _SignInScreenState extends State<SignInScreen> {
                   });
                 }),
                 signUpOption(context), 
+                SizedBox(height: 5),
+                Text(
+                  "or",
+                  style: TextStyle(color: hexStringToColor("DDDEEB") ),
+                ),
+                SizedBox(height: 5),
+                guestOption(context),
               ],
             ),
           ),
@@ -90,13 +97,31 @@ Row signUpOption(BuildContext context) {
     children: [
        Text("Don't have an account?",
           style: TextStyle(color: hexStringToColor("DDDEEB"))),
+        GestureDetector(
+          onTap: () {
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => SignUpScreen()));
+          },
+          child: Text(
+            " Sign Up",
+            style: TextStyle(color: hexStringToColor("DDDEEB"), fontWeight: FontWeight.bold),
+          ),
+        )
+    ],
+  );
+}
+
+Row guestOption(BuildContext context) { 
+  return Row(
+    mainAxisAlignment: MainAxisAlignment.center,
+    children: [
       GestureDetector(
         onTap: () {
           Navigator.push(context,
-              MaterialPageRoute(builder: (context) => SignUpScreen()));
+              MaterialPageRoute(builder: (context) => PreferenceScreen()));
         },
         child: Text(
-          " Sign Up",
+          "Continue as a guest.",
           style: TextStyle(color: hexStringToColor("DDDEEB"), fontWeight: FontWeight.bold),
         ),
       )
